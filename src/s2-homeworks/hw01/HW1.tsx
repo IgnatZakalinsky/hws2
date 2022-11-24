@@ -20,7 +20,7 @@ export type MessageType = any
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
+        avatar: avatar, // ТИПИЗИРУЕТСЯ КАК string
         name: 'Some Name',  // можно менять
     },
     message: {
