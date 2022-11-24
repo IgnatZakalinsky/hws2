@@ -24,9 +24,12 @@ export type UserType = {
 }
 
 export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-    const user = { // need to fix
+    const user = {
+        // need to fix
+        // нужно создать новый объект соответствующий типу UserType
+        // не забыть   сгенеририовать _id и вставить пришедший в функцию name
     }
-    setUsers([...users, user])
+    //засетайЮзеров([...старые users, и наш новый user])
 }
 
 const HW3 = () => {
