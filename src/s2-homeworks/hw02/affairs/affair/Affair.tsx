@@ -12,7 +12,7 @@ type AffairPropsType = {
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => {
         // need to fix
-        // ...и наконец берем из пропсов функцию, запускаем ее и передаем ей _id
+        // пропс.функция(мне нужен _id)
         // давайте проследим боевой путь это функции, или как она будет всплывать:
         // открывай в нескольких окнах и следи:
         // отсюда она всплывет в компоненту Affairs вместе с _id ->
@@ -45,7 +45,7 @@ function Affair(props: AffairPropsType) {
                 id={'hw2-button-delete-' + props.affair._id}
                 className={buttonClass}
                 // need to fix
-                //ОНКЛИК={(СКОБКИ СЛЕВА)=>deleteCallback(СКОБКИ СПРАВА, АРГУМЕНТ НЕ ЗАБЫЛ ПЕРЕДАТЬ?)}
+                //ОНКЛИК={ФУНКЦИЯ}
             >
                 {/*текст кнопки могут изменить студенты*/}
                 X
