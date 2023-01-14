@@ -44,7 +44,6 @@ export const filterAffairs = (affairs: AffairType[], filter:FilterType): AffairT
     return resulFilterAffairs
 }
 export const deleteAffair = (affairs:AffairType[] , _id:number): AffairType[]=> {
-
     let resultDeleteAffairs = affairs.filter((affair)=> affair._id != _id) ///непонтное нечто
     return resultDeleteAffairs 
 }
@@ -54,8 +53,10 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
+
     const deleteAffairCallback = (_id: number) => { 
-       
+       setAffairs(deleteAffair(affairs,_id))
+
 
     }
 
