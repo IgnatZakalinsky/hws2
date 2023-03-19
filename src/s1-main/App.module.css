@@ -7,5 +7,15 @@
 }
 
 .hwTitle {
+    padding: 131px 70px 10px 70px;
+    border-bottom: 1px solid #D9D9D9;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
 
+    /* identical to box height */
+
+    color: #000000;
 }
