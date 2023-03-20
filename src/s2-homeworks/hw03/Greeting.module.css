@@ -1,13 +1,19 @@
 .greetingForm {
+  width: 20px;
+  height: 20px;
 }
 
 .inputAndButtonContainer {
+  width: 240px;
+  height: 240px;
 }
 
 .error {
 }
 
 .input {
+  width: 240px;
+  height: 240px;
 }
 
 .input:focus {
@@ -29,6 +35,7 @@
 }
 
 .text {
+  font-size: medium;
 }
 
 .greeting {
