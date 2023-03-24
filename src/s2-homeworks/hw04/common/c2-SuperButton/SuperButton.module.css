@@ -1,25 +1,50 @@
 .button {
 }
 
+
 .disabled {
+  background-color:cornflowerblue;
+  width: 50px;
+  height: 20px;
 }
 
 .secondary {
+  background-color: aqua;
+  color: white;
+  width: 50px;
+  height: 20px;
 }
 
 .default {
+  color: white;
+  background-color: blue;
+  width: 50px;
+  height: 20px;
 }
 
 .red {
+  color: white;
+  background-color: red;
+  width: 50px;
+  height: 20px;
 }
 
 .default:hover {
+  background-color: blue;
+  width: 50px;
+  height: 20px;
 }
 
 .red:hover {
+  background-color:red;
+  width: 50px;
+  height: 20px;
 }
 
 .secondary:hover {
+  background-color:aqua;
+  width: 50px;
+  height: 20px;
 }
 
 
