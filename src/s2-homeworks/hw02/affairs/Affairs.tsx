@@ -1,7 +1,7 @@
-import React, {Dispatch, SetStateAction} from 'react'
-import Affair from './affair/Affair'
-import {AffairType, FilterType} from '../HW2'
-import s from './Affairs.module.css'
+import React, {Dispatch, SetStateAction} from 'react';
+import Affair from './affair/Affair';
+import {AffairType, Filter, FilterType} from '../HW2';
+import s from './Affairs.module.css';
 
 type AffairsPropsType = {
     data: Array<AffairType>;
@@ -11,23 +11,25 @@ type AffairsPropsType = {
 }
 
 function Affairs(props: AffairsPropsType) {
+    const {setFilter, filter} = props;
+
     const setAll = () => {
-        // need to fix
+        setFilter(Filter.ALL);
     }
     const setHigh = () => {
-        // need to fix
+        setFilter(Filter.HIGH);
     }
     const setMiddle = () => {
-        // need to fix
+        setFilter(Filter.MIDDLE);
     }
     const setLow = () => {
-        // need to fix
+        setFilter(Filter.LOW);
     }
 
-    const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
-    const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
-    const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
-    const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
+    const cnAll = `${s.button} ${s.all} ${filter === Filter.ALL && s.active}`;
+    const cnHigh = `${s.button} ${s.high} ${filter === Filter.HIGH && s.active}`;
+    const cnMiddle = `${s.button} ${s.middle} ${filter === Filter.MIDDLE && s.active}`;
+    const cnLow = `${s.button} ${s.low} ${filter === Filter.LOW && s.active}`;
 
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
