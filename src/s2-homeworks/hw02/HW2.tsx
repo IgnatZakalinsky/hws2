@@ -46,11 +46,11 @@ export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<Aff
 
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs);
-    const [filter, setFilter] = useState<FilterType>('all')
+    const [filter, setFilter] = useState<FilterType>('all');
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => { // need to fix any
-        // need to fix
+    const deleteAffairCallback = (_id: number) => {
+        setAffairs(deleteAffair(affairs, _id));
     }
 
     return (
