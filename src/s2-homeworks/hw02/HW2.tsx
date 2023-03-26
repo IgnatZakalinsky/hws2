@@ -18,12 +18,14 @@ import s2 from '../../s1-main/App.module.css'
 
 // types
 export type AffairPriorityType = string;
+
 export type AffairType = {
     _id: number;
     name: string;
     priority: AffairPriorityType
 }
-export type FilterType = 'all' | AffairPriorityType
+
+export type FilterType = 'all' | AffairPriorityType;
 
 // constants
 const defaultAffairs: Array<AffairType> = [
@@ -32,7 +34,7 @@ const defaultAffairs: Array<AffairType> = [
     {_id: 3, name: 'games', priority: 'low'},
     {_id: 4, name: 'work', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
-]
+];
 
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
@@ -43,7 +45,7 @@ export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<Aff
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs);
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
