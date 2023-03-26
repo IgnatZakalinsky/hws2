@@ -5,8 +5,8 @@ import s2 from '../Affairs.module.css'
 
 type AffairPropsType = {
     // key не нужно типизировать
-    affair: AffairType
-    deleteAffairCallback: any // need to fix any
+    affair: AffairType;
+    deleteAffairCallback: (id: number) => void;
 }
 
 function Affair(props: AffairPropsType) {
