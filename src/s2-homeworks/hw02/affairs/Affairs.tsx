@@ -11,7 +11,7 @@ type AffairsPropsType = {
 }
 
 function Affairs(props: AffairsPropsType) {
-    const {setFilter, filter} = props;
+    const {data, setFilter, filter, deleteAffairCallback} = props;
 
     const setAll = () => {
         setFilter(Filter.ALL);
@@ -31,11 +31,11 @@ function Affairs(props: AffairsPropsType) {
     const cnMiddle = `${s.button} ${s.middle} ${filter === Filter.MIDDLE && s.active}`;
     const cnLow = `${s.button} ${s.low} ${filter === Filter.LOW && s.active}`;
 
-    const mappedAffairs = props.data.map((a: AffairType) => (
+    const mappedAffairs = data.map((a: AffairType) => (
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+            deleteAffairCallback={deleteAffairCallback}
         />
     ))
 
