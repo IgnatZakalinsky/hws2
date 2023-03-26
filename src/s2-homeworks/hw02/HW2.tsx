@@ -28,6 +28,13 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType;
 
 // constants
+export enum Filter {
+    ALL = 'all',
+    HIGH = 'high',
+    MIDDLE = 'middle',
+    LOW = 'low',
+}
+
 const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
