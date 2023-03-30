@@ -3,8 +3,8 @@ import Greeting from './Greeting'
 import { UserType } from './HW3'
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UserType[]
+    addUserCallback: (name: string) => void
 }
 
 export const pureAddUser = (name: any, setError: any, setName: any, addUserCallback: any) => {
