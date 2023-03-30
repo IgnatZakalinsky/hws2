@@ -26,8 +26,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     addUserCallback,
 }) => {
     // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('');
+    const [error, setError] = useState<string>('');
 
     const setNameCallback = (e: any) => { // need to fix any
         setName('some name') // need to fix
