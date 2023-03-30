@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { v1 } from 'uuid'
+import React, {useState} from 'react'
+import {v1} from 'uuid'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
 
@@ -23,10 +23,14 @@ export type UserType = {
     name: string
 }
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-    const user = { // need to fix
+export const pureAddUserCallback = (name: string,
+                                    setUsers: (users: UserType[]) => void,
+                                    users: UserType[]) => {
+    const user: UserType = {
+        _id: v1(),
+        name: name,
     }
-    setUsers([...users, user])
+    setUsers([...users, user]);
 }
 
 const HW3 = () => {
