@@ -1,25 +1,52 @@
 .sidebar {
+  position: fixed;
+  left: -30vh;
+  top: 0;
+  transition: .2s ease-in-out;
 }
 
 .sidebar.open {
+  left: 0;
+  
 }
 
-.background {
+.background { 
+
 }
 
 .nav {
+  background-color: gray;
+  color: whitesmoke;
+  height: 100vh;
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  padding-top: 2rem;
 }
 
 .nav a {
+  padding: 10px;
+  font-size: large;
+  margin: 0.5rem;
 }
 
 .nav a:hover {
+  
 }
 
 .nav a.active {
+  
 }
 .close {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  border: none;
+  background-color: gray;
+  cursor: pointer;
 }
 
 .close img {
+  
 }
