@@ -12,6 +12,7 @@
 
     resize: none;
     border: none;
+    overflow:auto;
 
     background: #F5F7FB;
 
