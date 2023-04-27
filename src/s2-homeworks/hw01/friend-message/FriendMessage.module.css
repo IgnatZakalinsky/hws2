@@ -13,6 +13,15 @@
     height: 48px;
 }
 
+.friendImageAndTime {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    position: relative;
+}
+
 .friendText {
     display: flex;
     gap: 5px;
@@ -69,8 +78,8 @@
     font-size: 10px;
     line-height: 12px;
 
-    text-align: left;
-    margin-left: 10px;
+    position: absolute;
+    bottom: -15px;
 
     color: #000000;
 }

@@ -12,14 +12,20 @@ const Message = (props: MessagePropsType) => {
     return (
         <div id={'hw1-message-' + props.message.id} className={s.message}>
             <div className={s.imageAndText}>
+                <div className={s.imageAndTime}>
+                    <img
+                        id={'hw1-avatar-' + props.message.id}
+                        // создаёт студент
+                        src={props.message.user.avatar}
+                        alt='foto'
+                        //
+                    />
+                    <div id={'hw1-time-' + props.message.id} className={s.time}>
+                        {props.message.message.time}
 
-                <img
-                    id={'hw1-avatar-' + props.message.id}
-                    // создаёт студент
-                    src={props.message.user.avatar}
-                    alt='foto'
-                    //
-                />
+                        {/**/}
+                    </div>
+                </div>
 
 
                 <div className={s.text}>
@@ -34,11 +40,8 @@ const Message = (props: MessagePropsType) => {
                         {/**/}
                     </pre>
                 </div>
-            </div>
-            <div id={'hw1-time-' + props.message.id} className={s.time}>
-                {props.message.message.time}
 
-                {/**/}
+
             </div>
 
         </div>

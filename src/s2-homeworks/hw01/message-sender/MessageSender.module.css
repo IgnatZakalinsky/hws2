@@ -15,7 +15,7 @@
 
     resize: none;
     border: none;
-    overflow-x:auto;
+    overflow-x: auto;
 
     background: #F5F7FB;
 
@@ -26,6 +26,7 @@
 .textarea:focus {
     outline: none;
 }
+
 .button {
     width: 120px;
     height: 40px;
@@ -49,6 +50,7 @@
     color: #000000;
     background-color: #F5F7FB;
 }
+
 .button:active {
     background-color: #DDEEFF;
 }
