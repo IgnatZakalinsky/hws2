@@ -5,7 +5,7 @@
 }
 
 .textarea {
-    width: 100%;
+    width: calc(100vw - 120px - 140px);
     min-height: 40px;
     align-self: center;
 
