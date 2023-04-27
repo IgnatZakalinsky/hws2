@@ -9,11 +9,11 @@
     align-self: center;
 
     padding: 12px 24px;
-    box-sizing: border-box;
+
 
     resize: none;
     border: none;
-    overflow:auto;
+    overflow-x:auto;
 
     background: #F5F7FB;
 
