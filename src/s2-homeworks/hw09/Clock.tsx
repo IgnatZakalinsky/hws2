@@ -43,6 +43,7 @@ function Clock() {
     weekday: 'long',
     month: 'long',
     day: 'numeric',
+    year: 'numeric'
   });
   const timeString = date.toLocaleTimeString('en-US', {
     hour12: false,
@@ -71,8 +72,9 @@ function Clock() {
         <div className={s.more}>
           {show ? (
             <>
-              <span id={'hw9-month'}>{month}, </span>
+           
               <span id={'hw9-date'}>{dateString}</span>
+              <span id={'hw9-date'}>{month}</span>
             </>
           ) : (
             <>
