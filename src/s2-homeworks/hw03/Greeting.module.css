@@ -1,10 +1,11 @@
 .greetingForm {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
 }
 
 .inputAndButtonContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 12px;
 }
 
@@ -27,7 +28,6 @@
 }
 
 .input:focus {
-
     border: 1px solid #D1D1D1;
     border-radius: 5px;
 }
@@ -47,6 +47,8 @@
     cursor: pointer;
     opacity: 0.5;
     border-radius: 3px;
+    border: transparent;
+
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -57,6 +59,9 @@
 }
 
 .button:focus {
+    color: #212A34;
+    border: 1px solid #212A34;
+    background-color:transparent;
 }
 
 .button:active {
@@ -68,12 +73,19 @@
 .text {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 
-    color: #000000;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
 }
