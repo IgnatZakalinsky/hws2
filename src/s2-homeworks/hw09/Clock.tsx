@@ -37,12 +37,18 @@ function Clock() {
     };
   }, [timerId]);
 
+const qdate = new Date();
+const day = qdate.getDate().toString().padStart(2, '0');
+const qmonth = (qdate.getMonth() + 1).toString().padStart(2, '0');
+const year = qdate.getFullYear().toString();
+const qdateString = `${day}.${qmonth}.${year}`;
 
   const dateString = date.toLocaleDateString('en-US', 
   {
+    
+    day: 'numeric',
     weekday: 'long',
     month: 'numeric',
-    day: 'numeric',
     year: 'numeric'
   });
   const timeString = date.toLocaleTimeString('en-US', {
@@ -57,8 +63,8 @@ function Clock() {
     month: 'long',
 
   });
-  const [dayOfWeek, month] = dateString.split(', ');
-  let newString: string = month.replace(/\//g, '.');
+  const [dayOfWeek, month] = dateString.split(',');
+  // let newString: string = month.replace(/\//g, '.');
   return (
     <div className={s.clock}>
       <div
@@ -78,7 +84,7 @@ function Clock() {
           {show ? (
             <>
            
-              <span id={'hw9-date'}>{newString}, </span>
+              <span id={'hw9-date'}>{qdateString}, </span>
               <span id={'hw9-date'}>{monthString}</span>
             </>
           ) : (
