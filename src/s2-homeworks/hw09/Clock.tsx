@@ -58,7 +58,6 @@ function Clock() {
 
   });
   const [dayOfWeek, month] = dateString.split(', ');
-  const dateSplit = month.split('/')
   let newString: string = month.replace(/\//g, '.');
   return (
     <div className={s.clock}>
