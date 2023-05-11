@@ -47,6 +47,9 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
+                    <div id={'hw3-error'} className={s.error}>
+                        {error}
+                    </div>
 
                 </div>
 
@@ -60,9 +63,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 </button>
             </div>
 
-            <div id={'hw3-error'} className={s.error}>
-                {error}
-            </div>
+
 
             {lastUserName && (
                 <div className={s.greeting}>
