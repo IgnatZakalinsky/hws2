@@ -41,7 +41,7 @@ function Clock() {
   const dateString = date.toLocaleDateString('en-US', 
   {
     weekday: 'long',
-    month: 'long',
+    month: 'numeric',
     day: 'numeric',
     year: 'numeric'
   });
@@ -52,8 +52,14 @@ function Clock() {
     second: '2-digit',
   });
 
-  const [dayOfWeek, month] = dateString.split(', ');
+  const monthString = date.toLocaleDateString('en-US', 
+  {
+    month: 'long',
 
+  });
+  const [dayOfWeek, month] = dateString.split(', ');
+  const dateSplit = month.split('/')
+  let newString: string = month.replace(/\//g, '.');
   return (
     <div className={s.clock}>
       <div
@@ -73,8 +79,8 @@ function Clock() {
           {show ? (
             <>
            
-              <span id={'hw9-date'}>{dateString}</span>
-              <span id={'hw9-date'}>{month}</span>
+              <span id={'hw9-date'}>{newString}, </span>
+              <span id={'hw9-date'}>{monthString}</span>
             </>
           ) : (
             <>
