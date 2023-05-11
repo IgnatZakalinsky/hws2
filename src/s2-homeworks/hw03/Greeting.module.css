@@ -10,6 +10,7 @@
 }
 
 .error {
+    text-align: start;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -41,7 +42,7 @@
 }
 
 .button {
-    align-self: end;
+    align-self: start;
     height: 36px;
     width: 78px;
     cursor: pointer;
