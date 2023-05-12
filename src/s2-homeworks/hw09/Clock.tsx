@@ -82,7 +82,7 @@ const qdateString = `${day}.${qmonth}.${year}`;
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <span id={'hw9-day'}>{stringDay}, </span>
+        <span id={'hw9-day'}>{stringDay} </span>
         <span id={'hw9-time'}>
           <strong>{stringTime}</strong>
         </span>
@@ -93,7 +93,7 @@ const qdateString = `${day}.${qmonth}.${year}`;
           {show ? (
             <>
            
-              <span id={'hw9-month'}>{stringMonth}, </span> { " " }
+              <span id={'hw9-month'}>{stringMonth} </span> { " " }
               <span id={'hw9-date'}>{stringDate}</span>
             </>
           ) : (
