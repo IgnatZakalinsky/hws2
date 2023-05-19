@@ -2,6 +2,7 @@
     width: 167px;
     height: 30px;
 
+    color: #FFFFFF;
     cursor: pointer;
 
     border: transparent;
@@ -22,6 +23,8 @@
 }
 
 .secondary {
+    color: #0066CC;
+
     border: 1px solid #0066CC;
     border-radius: 3px;
 }
@@ -37,22 +40,28 @@
 }
 
 .default:hover {
+    background: #0080FF;
 }
 
 .red:hover {
+    background: #FF1A47;
 }
 
 .secondary:hover {
+    background: #E5F0FA;
 }
 
 
 .default:active {
+    background: #0059B3;
 }
 
 .secondary:active {
+    background: #B31232;
 }
 
 .red:active {
+    background: #C9E5FF;
 }
 
 .button:disabled {
