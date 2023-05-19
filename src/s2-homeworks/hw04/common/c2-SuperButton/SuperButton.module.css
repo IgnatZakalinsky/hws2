@@ -1,16 +1,39 @@
 .button {
+    width: 167px;
+    height: 30px;
+
+    cursor: pointer;
+
+    border: transparent;
+
+    font-family: 'Montserrat';
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .disabled {
+    color: #002E5C;
+
+    background: #004D99;
+    opacity: 0.5;
+    border-radius: 3px;
 }
 
 .secondary {
+    border: 1px solid #0066CC;
+    border-radius: 3px;
 }
 
 .default {
+    background: #0066CC;
+    border-radius: 3px;
 }
 
 .red {
+    background: #CC1439;
+    border-radius: 3px;
 }
 
 .default:hover {
