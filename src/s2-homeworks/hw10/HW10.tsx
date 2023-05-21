@@ -5,7 +5,6 @@ import {loadingAC} from './bll/loadingReducer'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s2 from '../../s1-main/App.module.css'
 import {Loader} from './Loader'
-
 /*
 * 1 - в файле loadingReducer.ts дописать типы и логику
 * 2 - получить isLoading из редакса
@@ -14,13 +13,12 @@ import {Loader} from './Loader'
 * */
 
 const HW10 = () => {
-    // useSelector, useDispatch // пишет студент
-    const isLoading = false
+    const dispatch = useDispatch()
+    const isLoading = useSelector((state: AppStoreType) => state.loading.isLoading )
 
-    const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
-        // dispatch
-
-        // setTimeout
+    const setLoading = () => { 
+        dispatch(loadingAC(true))
+        setTimeout(() => dispatch(loadingAC(false)), 1500)
     }
 
     return (

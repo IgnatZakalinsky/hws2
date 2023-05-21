@@ -2,7 +2,9 @@
 }
 
 .inputAndButtonContainer {
+
 }
+
 
 .error {
 }
@@ -29,6 +31,7 @@
 }
 
 .text {
+  font-size: medium;
 }
 
 .greeting {

@@ -1,4 +1,5 @@
 .friendMessage {
+  text-align: right;
 
 }
 
@@ -7,6 +8,7 @@
 }
 
 .friendImageAndText img {
+  width: 40px;
 
 }
 
