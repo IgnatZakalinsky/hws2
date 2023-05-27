@@ -3,9 +3,15 @@
 }
 
 .hw {
-
+    padding: 15px;
+    border: 1px solid #D9D9D9;
 }
 
 .hwTitle {
-
+    font-family: monospace sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    padding-left: 100px;
 }
