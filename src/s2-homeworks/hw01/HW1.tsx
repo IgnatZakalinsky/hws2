@@ -35,7 +35,7 @@ export const message0: MessageType = {
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar2,
+        avatar: avatar,
         name: 'Бизнесмен', // можно менять
     },
     message: {
