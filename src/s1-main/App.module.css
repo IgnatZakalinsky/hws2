@@ -3,7 +3,9 @@
 }
 
 .hw {
-
+margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 32px;
 }
 
 .hwTitle {
@@ -12,5 +14,5 @@
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    margin: 131px auto 10px 70px;
+    margin: 37px auto 10px 70px;
 }

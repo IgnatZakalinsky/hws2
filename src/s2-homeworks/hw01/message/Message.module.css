@@ -11,7 +11,7 @@
     grid-area: message;
     display: grid;
     grid-template-areas: 'text image';
-    margin: 24px 70px auto auto;
+    margin: 24px 0 auto auto;
 }
 
 .imageAndText img {
@@ -83,5 +83,5 @@
     font-weight: 600;
     font-size: 10px;
     color: #000000;
-    margin: 5px 75px;
+    margin: 5px 5px auto auto;
 }

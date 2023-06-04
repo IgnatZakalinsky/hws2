@@ -11,7 +11,7 @@
     grid-area: message;
     display: grid;
     grid-template-areas: 'image text';
-    margin: 30px auto auto 70px;
+    margin: 30px auto auto 0;
 }
 
 .friendImageAndText img {
@@ -84,5 +84,5 @@
     font-weight: 600;
     font-size: 10px;
     color: #000000;
-    margin: 5px 75px;
+    margin: 5px auto auto 5px;
 }
