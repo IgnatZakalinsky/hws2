@@ -7,5 +7,10 @@
 }
 
 .hwTitle {
-
+    font-family: 'Monsterrat', sans-serif;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 131px auto 10px 70px;
 }
