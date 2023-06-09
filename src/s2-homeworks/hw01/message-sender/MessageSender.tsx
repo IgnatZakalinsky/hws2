@@ -54,7 +54,6 @@ const MessageSender = (props: any) => {
                     title={'Shift+Enter for send'}
                     placeholder={'Type your message'}
                     value={text}
-
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                 />
