@@ -21,6 +21,8 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
+        if(text.trim()) {
+
         setMessages([
             ...messages,
             {
@@ -33,6 +35,7 @@ const MessageSender = (props: any) => {
             },
         ])
         setTimeout(() => setText(''), 4)
+        }
     }
 
     const onKeyDown = (e: any) => {
