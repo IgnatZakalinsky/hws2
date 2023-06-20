@@ -14,7 +14,7 @@ type OptionType = {
 type SuperSelectPropsType = DefaultSelectPropsType & {
   options?: OptionType[] | undefined;
   onChangeOption?: (option: string) => void;
-  value: string;
+  value: string | number;
 };
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
