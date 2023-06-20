@@ -7,40 +7,45 @@ type DefaultSelectPropsType = DetailedHTMLProps<
 >;
 
 type OptionType = {
-  id: number;
-  value: string | number;
+  id: string;
+  value: string;
 };
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-  options?: Array<OptionType>;
-  onChangeOption?: (option: number) => void;
-  value: string | number;
+  options?: OptionType[] | undefined;
+  onChangeOption?: (option: string) => void;
+  value: string;
 };
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
-  options,
+  options = [],
   className,
-  onChange,
   onChangeOption,
   ...restProps
 }) => {
-  const mappedOptions: JSX.Element[] = options
-    ? options.map((o) => (
-        <option id={'hw7-option-' + o.id} className={s.option} key={o.id} value={o.id}>
-          {o.value}
-        </option>
-      ))
-    : []; // map options with key
+  const mappedOptions: JSX.Element[] = options.map((o) => (
+    <option
+      id={'hw7-option-' + o.id}
+      className={s.option}
+      key={o.id}
+      value={o.id}
+    >
+      {o.value}
+    </option>
+  ));
 
   const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-    onChange && onChange(e);
-    onChangeOption && onChangeOption(+e.currentTarget.value);
+    onChangeOption && onChangeOption(e.currentTarget.value);
   };
 
   const finalSelectClassName = s.select + (className ? ' ' + className : '');
 
   return (
-    <select className={finalSelectClassName} onChange={onChangeCallback} {...restProps}>
+    <select
+      className={finalSelectClassName}
+      onChange={onChangeCallback}
+      {...restProps}
+    >
       {mappedOptions}
     </select>
   );

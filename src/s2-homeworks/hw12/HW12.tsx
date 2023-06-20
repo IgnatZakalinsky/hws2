@@ -6,34 +6,31 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeThemeId } from './bll/themeReducer';
 import { AppStoreType } from '../hw10/bll/store';
 
+interface Option {
+  id: '1' | '2' | '3';
+  value: string;
+}
 
-
-/*
-* 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
-* 2 - получить themeId из редакса
-* 3 - дописать тип и логику функции change
-* 4 - передать пропсы в SuperSelect
-* */
-
-  
-  const themes = [
-    { id: 1, value: 'light' },
-    { id: 2, value: 'blue' },
-    { id: 3, value: 'dark' },
-  ];
+const themes: Option[] = [
+  { id: '1', value: 'light' },
+  { id: '2', value: 'blue' },
+  { id: '3', value: 'dark' },
+];
 
 const HW12 = () => {
   const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
 
   const dispatch = useDispatch();
 
-  const change = (id: number) => {
+  const change = (value: string) => {
+    const id = value as '1' | '2' | '3';
     dispatch(changeThemeId(id));
   };
+  console.log(themeId)
 
   useEffect(() => {
     if (themeId !== undefined) {
-      document.documentElement.dataset.theme = themeId === 1 ? 'light' : themeId === 2 ? 'blue' : 'dark';
+      document.documentElement.dataset.theme = themeId + ''
     }
   }, [themeId]);
 
