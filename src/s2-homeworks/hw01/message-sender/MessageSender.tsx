@@ -21,6 +21,8 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
+        if(text.trim()) {
+
         setMessages([
             ...messages,
             {
@@ -33,6 +35,7 @@ const MessageSender = (props: any) => {
             },
         ])
         setTimeout(() => setText(''), 4)
+        }
     }
 
     const onKeyDown = (e: any) => {
@@ -54,7 +57,6 @@ const MessageSender = (props: any) => {
                     title={'Shift+Enter for send'}
                     placeholder={'Type your message'}
                     value={text}
-
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                 />
