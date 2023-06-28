@@ -1,5 +1,14 @@
 .buttonsContainer {
+    display: flex;
+    /*padding-top: 4vh;*/
+    gap: 3vh;
 }
 
 .editableSpanContainer {
+    color: #0080FF;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
 }

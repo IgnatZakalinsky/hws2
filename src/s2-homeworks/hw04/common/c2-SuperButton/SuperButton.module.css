@@ -33,7 +33,7 @@
     color: #0066CC;
     width: 167px;
     height: 30px;
-    border: 2px solid #0066CC;
+    border: 1px solid #0066CC;
 }
 
 .default {
@@ -63,19 +63,20 @@
 
 
 .default:active {
-    width: 149px;
+    margin-left: 1px;
+    width: 165px;
     height: 30px;
     background: #0059B3;
 }
 
 .secondary:active {
-    width: 149px;
+    width: 165px;
     height: 30px;
     background: #C9E5FF;
 }
 
 .red:active {
-    width: 149px;
+    width: 165px;
     height: 30px;
     background: #B31232;
 }
