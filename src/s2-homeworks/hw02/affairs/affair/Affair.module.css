@@ -8,11 +8,14 @@
 }
 
 .name {
+    font-family: 'Montserrat';
     display: flex;
     align-items: center;
     justify-content: center;
     width: 145px;
     height: 37px;
+    font-weight: 500;
+
 }
 
 .closeButton {
