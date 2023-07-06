@@ -1,7 +1,14 @@
 .select {
+    grid-area: s;
+    width: 164px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    height: 24px;
 }
 
 .select:focus {
+    outline: none;
 }
 
 

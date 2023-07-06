@@ -1,2 +1,6 @@
 .container {
+    margin-top: 32px;
+    display: grid;
+    grid-template-areas: 's r';
+    grid-template-columns: 1fr 3fr
 }

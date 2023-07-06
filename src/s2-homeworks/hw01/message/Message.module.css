@@ -1,31 +1,87 @@
 .message {
-
+    display: grid;
+    grid-template-areas: 'message'
+'time';
+    width: auto;
+    height: auto;
 }
 
 .imageAndText {
-
+    position: relative;
+    grid-area: message;
+    display: grid;
+    grid-template-areas: 'text image';
+    margin: 24px 0 auto auto;
 }
 
 .imageAndText img {
-
+    grid-area: image;
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 48px;
+    height: 48px;
 }
 
 .text {
-
+    position: relative;
+    grid-area: text;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: inherit;
+    height: inherit;
+    padding-right: 13px;
+    background-color: #0066CC;
+    border-radius: 10px 10px 0 10px;
+    box-shadow: 0 5px 20px rgba(29, 33, 38, 0.03), 0 1px 2px rgba(29, 33, 38, 0.1);
+    margin-right: 48px;
 }
 
 .text:after {
-
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+    content: "";
+    background-color: transparent;
+    height: 10px;
+    width: 16px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -10px 0 0 0 #0066CC;
 }
 
 .name {
-
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-left: 13px;
 }
 
 .messageText {
-
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: inherit;
+    max-width: 490px;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: break-spaces;
+    padding: 0 0 8px 13px;
 }
 
 .time {
-
+    grid-area: time;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-align: right;
+    font-weight: 600;
+    font-size: 10px;
+    color: #000000;
+    margin: 5px 5px auto auto;
 }

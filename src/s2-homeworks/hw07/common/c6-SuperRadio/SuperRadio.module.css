@@ -1,15 +1,38 @@
 .radio {
+    grid-area: i;
+    margin-right: 11px;
+    appearance: none;
 }
 
 .radio::before {
+    content: '';
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -3px;
 }
 
 
 .radio:checked::before {
+    background-color: black;
+    box-shadow: inset 0 0 0 4px white;
 }
 
 .label {
+    grid-area: r;
+    display: grid;
+    grid-template-areas: 'i o';
+    justify-content: left;
+    margin-bottom: 22px;
 }
 
 .options {
+    grid-area: o;
+    color: #000;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
 }
