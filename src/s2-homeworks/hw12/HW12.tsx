@@ -7,14 +7,14 @@ import { changeThemeId } from './bll/themeReducer';
 import { AppStoreType } from '../hw10/bll/store';
 
 interface Option {
-  id: '1' | '2' | '3';
+  id: 1 | 2 | 3;
   value: string;
 }
 
 const themes: Option[] = [
-  { id: '1', value: 'light' },
-  { id: '2', value: 'blue' },
-  { id: '3', value: 'dark' },
+  { id: 1, value: 'light' },
+  { id: 2, value: 'blue' },
+  { id: 3, value: 'dark' },
 ];
 
 const HW12 = () => {
@@ -22,8 +22,8 @@ const HW12 = () => {
 
   const dispatch = useDispatch();
 
-  const change = (value: string) => {
-    const id = value as '1' | '2' | '3';
+  const change = (value: number) => {
+    const id = value as 1 | 2 | 3;
     dispatch(changeThemeId(id));
   };
   console.log(themeId)

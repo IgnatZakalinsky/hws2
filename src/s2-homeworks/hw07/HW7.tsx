@@ -5,13 +5,13 @@ import s2 from '../../s1-main/App.module.css';
 import s from './HW7.module.css';
 
 const arr = [
-  { id: "1", value: 'x' },
-  { id: "2", value: 'y' },
-  { id: "3", value: 'z' },
+  { id: 1, value: 'x' },
+  { id: 2, value: 'y' },
+  { id: 3, value: 'z' },
 ];
 
 const HW7 = () => {
-  const [value, onChangeOption] = useState('1');
+  const [value, onChangeOption] = useState(1);
 
   return (
     <div id={'hw7'}>

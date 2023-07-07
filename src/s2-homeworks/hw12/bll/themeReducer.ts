@@ -1,16 +1,16 @@
 
 
 export type initStateType = {
-    themeId: '1' | '2' | '3';
+    themeId: 1 | 2 | 3;
   }
   
   export const initState: initStateType = {
-    themeId: '1',
+    themeId: 1,
   };
   
   interface ThemeAction {
     type: 'SET_THEME_ID';
-    id: '1' | '2' | '3';
+    id: 1 | 2 | 3;
   }
   
   export const themeReducer = (
@@ -25,7 +25,7 @@ export type initStateType = {
     }
   };
   
-  export const changeThemeId = (id: '1' | '2' | '3'): ThemeAction => ({
+  export const changeThemeId = (id: 1 | 2 | 3): ThemeAction => ({
     type: 'SET_THEME_ID',
     id,
   });
