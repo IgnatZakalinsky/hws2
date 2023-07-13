@@ -30,7 +30,7 @@ type ParamsType = {
 const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
+            "https://samurai.it-incubator.io/api/3.0",
             {params}
         )
         .catch((e) => {
@@ -51,37 +51,48 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                if (res) {
+                    setTechs(res.data.techs);
+                    setTotalCount(res.data.totalCount);
+                  }
+                })
+                .catch((e) => {
+                  alert(e.response?.data?.errorText || e.message);
+                })
+                .finally(() => {
+                  setLoading(false);
+                });
                 // делает студент
 
                 // сохранить пришедшие данные
 
                 //
-            })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
+        setPage(newPage);
+        setCount(newCount);
+        const params = { page: newPage, count: newCount };
+        const searchParams = new URLSearchParams(
+            Object.entries(params).reduce(
+            (acc, [key, value]) => ({ ...acc, [key]: String(value) }),
+            {}
+          ));
+        setSearchParams(searchParams);
+        sendQuery(params);
+      };
 
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
-    }
-
-    const onChangeSort = (newSort: string) => {
-        // делает студент
-
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
-    }
+      const onChangeSort = (newSort: string) => {
+        setSort(newSort);
+        setPage(1);
+        const params = { sort: newSort, page: 1, count };
+        const searchParams = new URLSearchParams(Object.entries(params).reduce(
+            (acc, [key, value]) => ({ ...acc, [key]: String(value) }),
+            {}
+          ));
+        setSearchParams(searchParams);
+        sendQuery(params);
+      };
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
