@@ -15,7 +15,7 @@ function JuniorPlus() {
             <HW12 />
             <HW13 />
             {/* <HW14 /> */}
-            <HW15 />
+            {/* <HW15 /> */}
         </div>
     )
 }
