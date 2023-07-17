@@ -19,6 +19,7 @@ export type initStateType = {
   ): initStateType => {
     switch (action.type) {
       case 'SET_THEME_ID':
+    
         return { ...state, themeId: action.id };
       default:
         return state;
