@@ -44,11 +44,14 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                setCode(`Ошибка: ${e.response.status}!`)
-                setImage(e.response.status === 400 ? error400 : e.response.status === 500 ? error500 : errorUnknown)
+            
+                setCode(`Ошибка: ${e.response.status}!`)  
+                        setInfo(e.response.data.info)
+                setImage(e.response.status === 400 ? error400 : e.response.status === 500 ? error500 : errorUnknown )
                 setText(e.response.data.errorText || 'Что-то пошло не так!')
               })
-              .finally(() => setLoading(false))
+            .finally(() => setLoading(false)
+            )
     }
 
     return (
