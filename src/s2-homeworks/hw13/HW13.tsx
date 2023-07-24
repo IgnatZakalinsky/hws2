@@ -41,16 +41,32 @@ const HW13 = () => {
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
-
             })
             .catch((e) => {
-            
-                setCode(`Ошибка: ${e.response.status}!`)  
-                        setInfo(e.response.data.info)
-                setImage(e.response.status === 400 ? error400 : e.response.status === 500 ? error500 : errorUnknown )
-                setText(e.response.data.errorText || 'Что-то пошло не так!')
+                console.log(e)
+                setInfo(e.response?.data?.info || e.name)  
+                setText(e.response?.data?.errorText || e.message)
+                switch (e.response.status) {
+                    case 400:
+                      setImage(error400);
+                      
+                      setCode('Ошибка 400 ')
+                      break;
+                    case 500:
+                      setImage(error500);
+                      setCode('Ошибка 500 ')
+                      break;
+                    case 404:
+                      setImage(errorUnknown);
+                      setCode('Ошибка 404 ')
+                      break;
+                    default:
+                      setImage(errorUnknown);
+                      setCode(' Error ')
+                  }
               })
             .finally(() => setLoading(false)
+
             )
     }
 
