@@ -16,7 +16,7 @@ import {useSearchParams} from 'react-router-dom'
 const getTechs = (find: string) => {
     return axios
         .get<{ techs: string[] }>(
-            "https://samurai.it-incubator.io/api/3.0"
+            "https://samurai.it-incubator.io/api/3.0/homework/test"
             ,
             {params: {find}}
         )
