@@ -16,7 +16,7 @@ import {useSearchParams} from 'react-router-dom'
 const getTechs = (find: string) => {
     return axios
         .get<{ techs: string[] }>(
-            "https://samurai.it-incubator.io/api/3.0/homework/test"
+            "https://samurai.it-incubator.io/api/3.0/homework/test2"
             ,
             {params: {find}}
         )
@@ -59,11 +59,13 @@ const HW14 = () => {
         setFind(params.find || '')
     }, [])
 
-    const mappedTechs = techs.map(t => (
-        <div key={t} id={'hw14-tech-' + t} className={s.tech}>
-            {t}
-        </div>
+    const mappedTechs = Array.isArray(techs)
+  ? techs.map((t) => (
+      <div key={t} id={'hw14-tech-' + t} className={s.tech}>
+        {t}
+      </div>
     ))
+  : null;
 
     return (
         <div id={'hw14'}>
