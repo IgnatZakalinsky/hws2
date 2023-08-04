@@ -36,7 +36,7 @@ const HW14 = () => {
         getTechs(value)
             .then((res: any) => {
                 if(res.data) {
-                    setTechs(res.data)
+                    setTechs(res.data.techs)
                 }
                 setLoading(false)
             })
@@ -60,12 +60,15 @@ const HW14 = () => {
     }, [])
 
     const mappedTechs = Array.isArray(techs)
-  ? techs.map((t) => (
-      <div key={t} id={'hw14-tech-' + t} className={s.tech}>
-        {t}
-      </div>
-    ))
-  : null;
+    ? techs.map((t) => (
+        <div key={t} id={'hw14-tech-' + t} className={s.tech}>
+          {t}
+        </div>
+      ))
+    : null;
+
+    console.log(techs,"techs")
+    console.log(mappedTechs,"mappedTechs")
 
     return (
         <div id={'hw14'}>
@@ -81,9 +84,10 @@ const HW14 = () => {
 
                 <div id={'hw14-loading'} className={s.loading}>
                     {isLoading ? '...ищем' : <br/>}
+                    {mappedTechs}
                 </div>
 
-                {mappedTechs}
+                
             </div>
         </div>
     )
