@@ -67,8 +67,6 @@ const HW14 = () => {
       ))
     : null;
 
-    console.log(techs,"techs")
-    console.log(mappedTechs,"mappedTechs")
 
     return (
         <div id={'hw14'}>

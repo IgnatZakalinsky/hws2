@@ -26,7 +26,6 @@ const HW12 = () => {
     const id = value as 1 | 2 | 3;
     dispatch(changeThemeId(id));
   };
-  console.log(themeId)
 
   useEffect(() => {
     if (themeId !== undefined) {
