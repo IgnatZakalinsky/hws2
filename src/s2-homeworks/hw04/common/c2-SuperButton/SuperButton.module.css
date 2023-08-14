@@ -5,7 +5,7 @@
     align-items: center;
     padding: 5px 24px;
     gap: 10px;
-    width: 132px;
+    width: 167px;
     height: 30px;
     left: 574px;
     top: 261px;
@@ -64,19 +64,19 @@
 
 .default:active {
     margin-left: 1px;
-    width: 165px;
+    width: 167px;
     height: 30px;
     background: #0059B3;
 }
 
 .secondary:active {
-    width: 165px;
+    width: 167px;
     height: 30px;
     background: #C9E5FF;
 }
 
 .red:active {
-    width: 165px;
+    width: 167px;
     height: 30px;
     background: #B31232;
 }

@@ -7,8 +7,6 @@ type GreetingContainerPropsType = {
     addUserCallback: (name: string) => void // need to fix any
 }
 
-let count = 0;
-
 export const pureAddUser = (
     name: string,
     setError: React.Dispatch<React.SetStateAction<string>>,
@@ -54,15 +52,16 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
 
     const setNameCallback = (e: React.FormEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value); // need to fix
+        setName(e.currentTarget.value.trim()); // need to fix
         error && setError("");
     };
     const addUser = () => {
-        count++
+        if(name) {
         setLastUserName(name);
         pureAddUser(name, setError, setName, addUserCallback);
-        setTotalUsers(count);
+        setTotalUsers(totalUsers + 1);
         setName("");
+        }
     };
 
     const onBlur = () => {

@@ -1,23 +1,56 @@
 .item {
+    padding-left: 50px;
+
 }
 
 .item:last-of-type {
 }
 
 .users {
+    border-spacing: 0;
 }
 
 .buttonsContainer {
+    padding: 20px 0 20px 45.4vh ;
+    display: flex;
+    gap: 12px;
 }
 
 .container {
+
 }
 
 .thead {
+    background-color: #E5E5E5;
+    font-family: "Roboto Mono";
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
 }
 
 .nameCol {
+    padding: 20px 5vh;
+    font-weight: 300;
+}
+
+.nameColHeader {
+    padding: 20px 5vh;
 }
 
 .ageCol {
+    padding: 20px 40vh;
+    font-family: "Roboto Mono";
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.line {
+    background-color: yellow; /* Set your desired background color here */
+    line-height: 1.2; /* Adjust to match the height of a single line of text */
+    padding: 0;
+    position: absolute;
+    width: 101.4vh;
 }
