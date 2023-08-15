@@ -95,10 +95,9 @@ const HW15 = () => {
   
     useEffect(() => {
       const params = Object.fromEntries(searchParams);
-      const parsedCount = parseInt(params.count, 10);
       setPage(+params.page || 1);
-      setCount(Number.isNaN(parsedCount) ? 4 : parsedCount);
-      sendQuery({ page: params.page, count: parsedCount });
+      setCount(+params.count || 4);
+      sendQuery({ page: params.page, count: params.count });
     }, []);
   
     const mappedTechs = techs.map((t, index) => (
