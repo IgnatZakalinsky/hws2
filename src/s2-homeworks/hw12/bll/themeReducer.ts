@@ -1,7 +1,7 @@
 const initState = {
     themeId: 1,
 }
-type InitStateType = {
+export type InitStateType = {
     themeId:number
 }
 type ActionType = SetIdType
@@ -13,7 +13,11 @@ type SetIdType = {
 export const themeReducer = (state:InitStateType = initState, action: ActionType): InitStateType => { // fix any
     switch (action.type) {
         // дописать
-
+        case 'SET_THEME_ID':  {
+            const copyState = {...state}
+            copyState.themeId = action.id
+            return copyState
+        }
         default:
             return state
     }
