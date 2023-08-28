@@ -17,7 +17,6 @@ export const pureAddUser = (
     if (name === "") {
         setError("Ошибка! Введите имя!");
     }
-    debugger
     setName(name);
     addUserCallback(name);
 };

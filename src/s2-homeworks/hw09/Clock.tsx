@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from "react";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
-import {restoreState} from "../hw06/localStorage/localStorage";
+import {restoreState, saveState} from "../hw06/localStorage/localStorage";
 import s from "./Clock.module.css";
 
 function Clock() {
     const [timerId, setTimerId] = useState<NodeJS.Timeout | undefined>(undefined);
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
-    const [date, setDate] = useState<Date>(new Date(restoreState("hw9-date", Date.now())));
+    const [date, setDate] = useState<Date>(new Date( Date.now()));
     const [show, setShow] = useState<boolean>(false);
     const [disabled, setDisabled] = useState<boolean>(false);
 
     const dayOfWeekFormatter = new Intl.DateTimeFormat("en", {weekday: "long"});
-    const monthFormatter = new Intl.DateTimeFormat("en", {month: 'short'});
+    const monthFormatter = new Intl.DateTimeFormat("en", {month: 'long'});
 
 
     const start = () => {
@@ -45,8 +45,7 @@ function Clock() {
     const stringTime = `${timeIntervalFormatter(date.getHours())}:${timeIntervalFormatter(date.getMinutes())}:${timeIntervalFormatter(date.getSeconds())}` || <br/>;
 
     // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
-    const stringDate = `${timeIntervalFormatter(date.getDay())}.${timeIntervalFormatter(date.getMonth())}.${timeIntervalFormatter(date.getFullYear())}` || <br/>;
-
+    const stringDate = date.toLocaleDateString('ru-Ru') || <br/>
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = dayOfWeekFormatter.format(date) || <br/>; // пишут студенты
     const stringMonth = monthFormatter.format(date) || <br/>; // пишут студенты

@@ -8,7 +8,6 @@ type UserPropsType = {
 }
 
 const User: React.FC<UserPropsType> = ({ u }) => {
-    debugger
     return (
         <>
         <tr id={'hw8-user-' + u._id + '-' + u.age} className={s.item}>

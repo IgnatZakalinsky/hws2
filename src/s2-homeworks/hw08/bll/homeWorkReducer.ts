@@ -5,7 +5,6 @@ type ActionType =
     | { type: 'check'; payload: number }
 
 export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => {
-    debugger
     switch (action.type) {
         case 'sort': { // by name
             return action.payload === 'up'
