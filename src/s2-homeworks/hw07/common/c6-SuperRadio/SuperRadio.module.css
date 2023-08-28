@@ -1,4 +1,7 @@
 .radio {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
 }
 
 .radio::before {
@@ -6,9 +9,20 @@
 
 
 .radio:checked::before {
+    width: 21px;
+    height: 21px;
 }
 
 .label {
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 3px 0 10px 0;
 }
 
 .options {
