@@ -1,9 +1,22 @@
 .select {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 165px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #C2C2C2;
+  background: #FFF;
 }
 
 .select:focus {
+
 }
 
+.select .option:hover {
 
-.option:hover {
 }
+
