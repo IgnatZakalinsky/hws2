@@ -1,7 +1,10 @@
 .message {
   display: flex;
-  justify-content: end;
-  margin-bottom: 25px;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  margin: 48px 0;
+  align-items: flex-end;
 }
 
 .imageAndText {
@@ -21,27 +24,18 @@
   background-color: #0066CC;
   color: #FFFFFF;
   padding: 5px 5px 5px 5px;
-  border-radius: 10px;
-}
-
-.text:after {
-  content: "";
-  position: absolute;
-  border: 0 solid transparent;
-  border-top: 9px solid #0066CC;
-  border-radius: 0 20px 0;
-  transform: rotate(97deg);
+  border-radius: 5px 5px 0 5px;
 }
 
 .text:after {
   content: '';
   position: absolute;
-  top: 30px;
-  right: -3px;
-  border-top: 12px solid transparent;
-  border-right: 12px solid #0066CC;
-  border-left: none;
-  border-bottom: 12px solid transparent;
+  width: 8px;
+  height: 8px;
+  right: -8px;
+  bottom: 0;
+  background: linear-gradient(225deg, rgba(255,255,255,1) 50%, rgba(0,102,204,1) 50%);
+  z-index: 1;
 }
 
 .name {
@@ -57,10 +51,10 @@
 }
 
 .time {
-  font-family: Montserrat, sans-serif;
+  color: #000;
   font-size: 10px;
-  font-weight: bold;
-  margin-left: 8px;
-  display: flex;
-  align-items: end;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+  bottom: -12px;
 }

@@ -1,6 +1,10 @@
 .friendMessage {
   display: flex;
-  margin-bottom: 15px;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  margin: 48px 0;
+  align-items: flex-start;
 }
 
 .friendImageAndText {
@@ -18,27 +22,19 @@
   width: 470px;
   background-color: #F5F7FB;
   padding: 5px 5px 5px 5px;
-  border-radius: 10px;
-}
-
-.friendText:after {
-  content: "";
-  position: absolute;
-  border: 0 solid transparent;
-  border-top: 9px solid #F5F7FB;
-  border-radius: 0 20px 0;
-  transform: rotate(97deg);
+  border-radius: 5px 5px 5px 0;
 }
 
 .friendText:after {
   content: '';
   position: absolute;
-  top: 180px;
-  left: 455px;
-  border-top: 15px solid transparent;
-  border-right: 15px solid #F5F7FB;
-  border-left: none;
-  border-bottom: 15px solid transparent;
+  width: 8px;
+  height: 8px;
+  left: 50px;
+  bottom: 0;
+  background: linear-gradient(225deg, rgba(255,255,255,1) 50%, rgba(245,247,251,1) 50%);
+  z-index: 1;
+  transform: rotate(-90deg);
 }
 
 .friendName {
@@ -54,10 +50,10 @@
 }
 
 .friendTime {
-  font-family: Montserrat, sans-serif;
+  color: #000;
   font-size: 10px;
-  font-weight: bold;
-  margin-left: 8px;
-  display: flex;
-  align-items: end;
+  font-weight: 600;
+  position: absolute;
+  left: 10px;
+  bottom: -12px;
 }
