@@ -8,9 +8,12 @@
 }
 
 .buttonsContainer {
+  display: flex;
+
 }
 
 .container {
+  width: 610px;
 }
 
 .thead {
