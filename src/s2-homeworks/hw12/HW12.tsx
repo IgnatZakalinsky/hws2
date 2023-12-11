@@ -20,7 +20,7 @@ const themes = [
 ]
 
 const rootReducer = combineReducers({
-    item: themeReducer,
+    theme: themeReducer,
 })
 export const store = legacy_createStore(rootReducer);
 
@@ -30,7 +30,7 @@ export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelecto
 const HW12 = () => {
     // взять ид темы из редакса
 
-    const item = useAppSelector((state) => state.item.themeId)
+    const item = useAppSelector((state) => state.theme.themeId)
     const themeId = item
     const dispatch = useDispatch()
     console.log( item)
@@ -52,7 +52,7 @@ const HW12 = () => {
 
                 <div className={s2.hw}>
                     <SuperSelect
-                        id={'hw12-select-theme' + themeId}
+                        id={'hw12-select-theme'}
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
