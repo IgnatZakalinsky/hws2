@@ -2,8 +2,8 @@ import React, {useEffect} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
-import {Provider, TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux'
-import {changeThemeId, InitStateType, themeReducer} from './bll/themeReducer'
+import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux'
+import {changeThemeId, themeReducer} from './bll/themeReducer'
 import {combineReducers, legacy_createStore} from "redux";
 
 /*
@@ -56,7 +56,6 @@ const HW12 = () => {
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
-                        value={themeId}
                         // сделать переключение тем
                     />
                 </div>

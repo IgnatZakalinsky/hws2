@@ -10,11 +10,9 @@ import {Provider} from "react-redux";
 function JuniorPlus() {
     return (
         <div id={'hw5-page-junior-plus'}>
-            <HW10 />
-            <HW11 />
-            <Provider store={store}>
-                <HW12 />
-            </Provider>
+            <HW10/>
+            <HW11/>
+            <HW12/>
 
             {/*<HW13 />*/}
             {/*<HW14 />*/}
