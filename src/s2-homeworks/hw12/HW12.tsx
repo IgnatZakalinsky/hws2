@@ -30,7 +30,7 @@ export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelecto
 const HW12 = () => {
     // взять ид темы из редакса
     const item = useAppSelector((state) => state.theme.themeId)
-    const themeId = item
+    const themeId = 1
     const dispatch = useDispatch()
     console.log( item)
     const change = (id: number) => { // дописать функцию.
@@ -56,6 +56,7 @@ const HW12 = () => {
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
+                        value={item}
                         // сделать переключение тем
                     />
                 </div>
