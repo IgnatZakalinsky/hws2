@@ -29,7 +29,6 @@ export type AppRootStateType = ReturnType<typeof rootReducer>
 export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelector
 const HW12 = () => {
     // взять ид темы из редакса
-
     const item = useAppSelector((state) => state.theme.themeId)
     const themeId = item
     const dispatch = useDispatch()
@@ -56,7 +55,6 @@ const HW12 = () => {
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
-                        value={item}
                         // сделать переключение тем
                     />
                 </div>
