@@ -33,10 +33,9 @@ const HW12 = () => {
     const item = useAppSelector((state) => state)
     const themeId = +item.item.themeId
     const dispatch = useDispatch()
-    console.log(typeof themeId)
+    console.log( +item.item.themeId)
     const change = (id: number) => { // дописать функцию.
         dispatch(changeThemeId(id))
-
     }
 
     useEffect(() => {
@@ -56,7 +55,7 @@ const HW12 = () => {
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
-                        value={themeId}
+                        value={+item.item.themeId}
                         // сделать переключение тем
                     />
                 </div>
