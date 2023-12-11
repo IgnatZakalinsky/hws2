@@ -31,9 +31,9 @@ const HW12 = () => {
     // взять ид темы из редакса
 
     const item = useAppSelector((state) => state)
-    const themeId = item.item.themeId
+    const themeId = +item.item.themeId
     const dispatch = useDispatch()
-    console.log(themeId)
+    console.log(typeof themeId)
     const change = (id: number) => { // дописать функцию.
         dispatch(changeThemeId(id))
 
