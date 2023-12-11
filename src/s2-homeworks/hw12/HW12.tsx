@@ -31,7 +31,7 @@ const HW12 = () => {
     // взять ид темы из редакса
 
     const item = useAppSelector((state) => state.item.themeId)
-    const themeId = 2
+    const themeId = item
     const dispatch = useDispatch()
     console.log( item)
     const change = (id: number) => { // дописать функцию.
@@ -52,7 +52,7 @@ const HW12 = () => {
 
                 <div className={s2.hw}>
                     <SuperSelect
-                        id={'hw12-select-theme'}
+                        id={'hw12-select-theme' + themeId}
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
