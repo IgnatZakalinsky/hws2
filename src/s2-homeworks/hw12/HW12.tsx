@@ -30,7 +30,7 @@ export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelecto
 const HW12 = () => {
     // взять ид темы из редакса
     const item = useAppSelector((state) => state.theme.themeId)
-    const themeId = 1
+    const themeId = 3
     const dispatch = useDispatch()
     console.log( item)
     const change = (id: number) => { // дописать функцию.
