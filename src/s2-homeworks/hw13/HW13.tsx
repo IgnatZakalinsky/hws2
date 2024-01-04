@@ -45,7 +45,7 @@ const HW13 = () => {
             })
             .catch((e) => {
                 // дописать
-                setDisable(false)
+
                 if (x === false) {
                     setImage(error500)
                     setCode('Код 500!')
