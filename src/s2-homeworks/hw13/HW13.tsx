@@ -39,7 +39,7 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 setInfo('loaded')
-                setDisable(false)
+                setDisable(true)
                 // дописать
 
             })
