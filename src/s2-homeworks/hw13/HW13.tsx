@@ -57,7 +57,7 @@ const HW13 = () => {
                 } else if (x === null) {
                     setImage(errorUnknown)
                     setCode('errorUnknown!')
-                    setInfo('Error')
+                    setInfo('errorUnknown')
                 }
             })
     }
