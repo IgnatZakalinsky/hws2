@@ -32,7 +32,6 @@ const HW12 = () => {
     const item = useAppSelector((state) => state.theme.themeId)
     const themeId = item
     const dispatch = useDispatch()
-    console.log(typeof item)
     const change = (id: number) => { // дописать функцию.
         dispatch(changeThemeId(id))
     }
@@ -40,7 +39,6 @@ const HW12 = () => {
 
     useEffect(() => {
         document.documentElement.dataset.theme = themeId + ''
-        console.log(document.documentElement.dataset.theme)
     }, [themeId])
 
     return (
