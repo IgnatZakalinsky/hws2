@@ -26,6 +26,7 @@ const getTechs = (find: string) => {
 }
 
 const HW14 = () => {
+
     const [find, setFind] = useState('')
     const [isLoading, setLoading] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams()
@@ -37,34 +38,36 @@ const HW14 = () => {
         getTechs(value)
             .then((res:any) => {
                 // делает студент
-                setLoading(false)
                 // сохранить пришедшие данные
                 setTechs(res.data.techs)
+                setSearchParams({ find: value });
                 //
-            })
+            }).finally(() => setLoading(false))
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-        sendQuery(value)
+
         // добавить/заменить значение в квери урла
         // setSearchParams(
-        //setSearchParams(value)
+        setSearchParams({ find: value })
+
         //
     }
 
     useEffect(() => {
+
         const params = Object.fromEntries(searchParams)
+        console.log(params)
         sendQuery(params.find || '')
         setFind(params.find || '')
-    }, [])
+    }, [searchParams])
     const mappedTechs = techs.map(t => (
         <div key={t} id={'hw14-tech-' + t} className={s.tech}>
             {t}
         </div>
     ))
-    console.log(mappedTechs)
     return (
         <div id={'hw14'}>
             <div className={s2.hwTitle}>Homework #14</div>

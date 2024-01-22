@@ -50,36 +50,39 @@ const HW15 = () => {
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
-            .then((res) => {
+            .then((res:any) => {
                 // делает студент
-
+                setTechs(res.data.techs);
+                setTotalCount(res.data.totalCount);
                 // сохранить пришедшие данные
-
                 //
-            })
+            }).finally(() => {
+            setLoading(false);
+        });
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
-        // setPage(
+        setPage(newPage);
+        setCount(newCount);        // setPage(
         // setCount(
-
+        sendQuery({ page: newPage, count: newCount });
         // sendQuery(
         // setSearchParams(
-
+        setSearchParams(`page=${newPage}&count=${newCount}&sort=${sort}`);
         //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
+        setSort(newSort);
+        setPage(1);
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        sendQuery({ page: 1, count, sort: newSort });
         // sendQuery(
         // setSearchParams(
-
+        setSearchParams(`page=1&count=${count}&sort=${newSort}`);
         //
     }
 
